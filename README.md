@@ -8,7 +8,7 @@ Designed and manufactured a prototype carbon fiber racing rim for application in
 Rebuilt and upgraded a shock dynomometer for testing damping characteristics of Formula SAE shock absorbers.
 
 ## ENGG 3280 Machine Design - Precision Irrigation System
-Created an precision irrigiation robot intended for automated watering of multiple plant types in small areas.
+Created a precision irrigiation robot intended for automated watering of multiple plant types in small areas.
 
 ## ENGG 3100 Design III - Microtube Heat Exchanger for SOFC Vehicle
 Designed a unique microtube heat exchanger for use with a Solid-Oxide-Fuel-Cell system in an automotive application.
