@@ -11,7 +11,7 @@ Rebuilt and upgraded a shock dynomometer for testing damping characteristics of 
 Created an precision irrigiation robot intended for automated watering of multiple plant types in small areas.
 
 ## ENGG 3100 Design III - Microtube Heat Exchanger for SOFC Vehicle
-Designed a unique microtube heat exchanger for use with a Solid-Oxide_Fuel-Cell system in an automotive application.
+Designed a unique microtube heat exchanger for use with a Solid-Oxide-Fuel-Cell system in an automotive application.
 
 ## ENGG 4230 Energy Conversion - Solar Design
 Designed a solar energy retro-fit system for a residential home.
