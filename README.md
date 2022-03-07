@@ -1,7 +1,7 @@
-# University-of-Guelph-Projects
+# University of Guelph Projects
 This repo contains files from various design projects I was part of during my time at the University of Guelph. To me these design courses were always the most exciting, because engineering is about the creativity and practical application of knowledge required to solve problems, and these projects allowed us to bring together everything we were learning and see what could be accomplished in a group environment.
 
-## ENGG 41XX Senior Capstone Design - Carbon Fiber Rims
+### ENGG 41XX Senior Capstone Design - Carbon Fiber Rims
 Designed and manufactured a prototype carbon fiber racing rim for application in a Formula SAE car.
 
 ## ENGG 4220 Interdisciplinary Mechanical Design - Shock Dynomometer
