@@ -13,6 +13,9 @@ Created a precision irrigiation robot intended for automated watering of multipl
 ## ENGG 3100 Design III - Microtube Heat Exchanger for SOFC Vehicle
 Designed a unique microtube heat exchanger for use with a Solid-Oxide-Fuel-Cell system in an automotive application.
 
+## ENGG 3490 Mechatronics - Intelligent Bolt Sorter
+Created a device to identify and mechanically sort various types of nuts and bolts.
+
 ## ENGG 4230 Energy Conversion - Solar Design
 Designed a solar energy retro-fit system for a residential home.
 
