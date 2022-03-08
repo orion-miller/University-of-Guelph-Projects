@@ -1,0 +1,25 @@
+﻿# encoding: utf-8
+# Release 18.2
+SetScriptVersion(Version="18.2.109")
+system1 = GetSystem(Name="SYS")
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+model1.Exit()
+Save(Overwrite=True)
+favorites1 = EngData.LoadFavoriteItems()
+EngData.EnableFilter(Enable=False)
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.ImportMaterial(
+    Name="Structural Steel",
+    Source="General_Materials.xml")
+engineeringDataComponent1 = system1.GetComponent(Name="Engineering Data")
+engineeringDataComponent1.UpdateUpstreamComponents()
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1.Edit()
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+material1.Delete()
+matl1.Delete()
+modelComponent1.Refresh()
+model1.Edit()
+model1.Exit()

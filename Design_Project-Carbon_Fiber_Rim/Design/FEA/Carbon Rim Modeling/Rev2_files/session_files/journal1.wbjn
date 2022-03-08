@@ -1,0 +1,192 @@
+# encoding: utf-8
+# Release 19.1
+SetScriptVersion(Version="19.1.103")
+template1 = GetTemplate(
+    TemplateName="ACP",
+    Solver="Pre")
+system1 = template1.CreateSystem()
+system2 = template1.CreateSystem(
+    Position="Below",
+    RelativeTo=system1)
+system3 = template1.CreateSystem(
+    Position="Below",
+    RelativeTo=system2)
+favorites1 = EngData.LoadFavoriteItems()
+library1 = EngData.OpenLibrary(
+    Name="Composite Materials",
+    Source="Composite_Materials.xml")
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.ImportMaterial(
+    Name="Epoxy Carbon Woven (230 GPa) Wet",
+    Source="Composite_Materials.xml")
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometry1.Exit()
+geometry1.SetFile(FilePath="H:/41xx/Inside Shell.SLDPRT")
+geometry2 = system2.GetContainer(ComponentName="Geometry")
+geometry2.SetFile(FilePath="H:/41xx/Outside Shell.SLDPRT")
+geometry3 = system3.GetContainer(ComponentName="Geometry")
+geometry3.SetFile(FilePath="H:/41xx/Ring Shell.SLDPRT")
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+modelComponent2 = system2.GetComponent(Name="Model")
+modelComponent2.Refresh()
+model2 = system2.GetContainer(ComponentName="Model")
+model2.Edit()
+modelComponent3 = system3.GetComponent(Name="Model")
+modelComponent3.Refresh()
+model3 = system3.GetContainer(ComponentName="Model")
+model3.Edit()
+model1.Edit()
+modelComponent1.Reset()
+modelComponent1.Refresh()
+model1.Edit()
+model2.Edit()
+model1.Edit()
+Refresh()
+Update()
+model1.Edit()
+modelComponent1.Update(AllDependencies=True)
+model1.Edit()
+setup1 = system2.GetContainer(ComponentName="Setup")
+setup1.StartACP(ACPMode="pre")
+setup1.ExitACP(Save=True)
+modelComponent1.UpdateUpstreamComponents()
+model1.Edit()
+setupComponent1 = system1.GetComponent(Name="Setup")
+setupComponent1.UpdateUpstreamComponents()
+setupComponent1.Update(AllDependencies=True)
+model2.Edit()
+engineeringData2 = system2.GetContainer(ComponentName="Engineering Data")
+matl2 = engineeringData2.ImportMaterial(
+    Name="Epoxy Carbon Woven (230 GPa) Wet",
+    Source="Composite_Materials.xml")
+engineeringData3 = system3.GetContainer(ComponentName="Engineering Data")
+matl3 = engineeringData3.ImportMaterial(
+    Name="Epoxy Carbon Woven (230 GPa) Wet",
+    Source="Composite_Materials.xml")
+Refresh()
+Update()
+Refresh()
+Update()
+setup1.StartACP(ACPMode="pre")
+setup1.ExitACP(Save=True)
+model3.Edit()
+Refresh()
+modelComponent3.Update(AllDependencies=True)
+modelComponent1.Update(AllDependencies=True)
+modelComponent3.Update(AllDependencies=True)
+Save(Overwrite=True)
+model2.Edit()
+system3.Delete()
+system2.Delete()
+Update()
+model1.Edit()
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+geometryComponent1.Reset()
+geometry1.SetFile(FilePath="H:/41xx/Inside Shell.SLDPRT")
+modelComponent1.Refresh()
+model1.Edit()
+modelComponent1.Update(AllDependencies=True)
+setup2 = system1.GetContainer(ComponentName="Setup")
+setup2.Refresh()
+setup2.StartACP(ACPMode="pre")
+Parameters.SetDesignPointsOutOfDate()
+Parameters.SetRetainedDesignPointDataInvalid(InvalidContainers=[engineeringData1, geometry1, model1, setup2])
+MarkComponentsOutOfDateForDps(Components=[setupComponent1])
+Parameters.SetPartiallyRetainedDataInvalid(Containers=[setup2])
+Update()
+system4 = template1.CreateSystem(
+    Position="Below",
+    RelativeTo=system1)
+engineeringData4 = system4.GetContainer(ComponentName="Engineering Data")
+matl4 = engineeringData4.ImportMaterial(
+    Name="Epoxy Carbon Woven (230 GPa) Wet",
+    Source="Composite_Materials.xml")
+EngData.EnableFilter(Enable=False)
+geometry4 = system4.GetContainer(ComponentName="Geometry")
+geometry4.SetFile(FilePath="H:/41xx/Outside Shell.SLDPRT")
+modelComponent4 = system4.GetComponent(Name="Model")
+modelComponent4.Refresh()
+model4 = system4.GetContainer(ComponentName="Model")
+model4.Edit()
+Save(Overwrite=True)
+modelComponent4.Update(AllDependencies=True)
+setup3 = system4.GetContainer(ComponentName="Setup")
+setup3.Refresh()
+setup3.StartACP(ACPMode="pre")
+Parameters.SetDesignPointsOutOfDate()
+Parameters.SetRetainedDesignPointDataInvalid(InvalidContainers=[engineeringData4, geometry4, model4, setup3])
+setupComponent2 = system4.GetComponent(Name="Setup")
+MarkComponentsOutOfDateForDps(Components=[setupComponent2])
+Parameters.SetPartiallyRetainedDataInvalid(Containers=[setup3])
+Save(Overwrite=True)
+setupComponent2.Update(AllDependencies=True)
+system5 = template1.CreateSystem(
+    Position="Below",
+    RelativeTo=system4)
+engineeringData5 = system5.GetContainer(ComponentName="Engineering Data")
+matl5 = engineeringData5.ImportMaterial(
+    Name="Epoxy Carbon Woven (230 GPa) Wet",
+    Source="Composite_Materials.xml")
+system5.Delete()
+template2 = GetTemplate(TemplateName="Mechanical Model")
+system6 = template2.CreateSystem(
+    Position="Below",
+    RelativeTo=system4)
+library2 = EngData.OpenLibrary(
+    Name="General Materials",
+    Source="General_Materials.xml")
+engineeringData6 = system6.GetContainer(ComponentName="Engineering Data")
+matl6 = engineeringData6.ImportMaterial(
+    Name="Aluminum Alloy",
+    Source="General_Materials.xml")
+geometry5 = system6.GetContainer(ComponentName="Geometry")
+geometry5.SetFile(FilePath="H:/41xx/Ring Shell.SLDPRT")
+modelComponent5 = system6.GetComponent(Name="Model")
+modelComponent5.Refresh()
+model5 = system6.GetContainer(ComponentName="Model")
+model5.Edit()
+Save(Overwrite=True)
+template3 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system7 = template3.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+modelComponent6 = system7.GetComponent(Name="Model")
+setupComponent1.TransferSpecificData(
+    TransferDataName="EnhancedModelData",
+    TargetComponent=modelComponent6)
+setupComponent2.TransferSpecificData(
+    TransferDataName="EnhancedModelData",
+    TargetComponent=modelComponent6)
+modelComponent5.TransferData(TargetComponent=modelComponent6)
+modelComponent6.Refresh()
+modelComponent6.Refresh()
+model6 = system7.GetContainer(ComponentName="Model")
+model6.PreviewGeometry()
+modelComponent5.Update(AllDependencies=True)
+model6.PreviewGeometry()
+Save(Overwrite=True)
+resultsComponent1 = system7.GetComponent(Name="Results")
+resultsComponent1.Update(AllDependencies=True)
+setupComponent3 = system7.GetComponent(Name="Setup")
+setupComponent3.Update(AllDependencies=True)
+model1.Edit()
+model4.Edit()
+model5.Edit()
+Update()
+model6.Edit()
+model5.Edit()
+modelComponent6.Update(AllDependencies=True)
+model5.Edit()
+modelComponent6.Update(AllDependencies=True)
+Save(Overwrite=True)
+modelComponent5.DeleteTransfer(TargetComponent=modelComponent6)
+modelComponent6.Update(AllDependencies=True)
+Save(Overwrite=True)
+model6.Exit()
+Save(Overwrite=True)

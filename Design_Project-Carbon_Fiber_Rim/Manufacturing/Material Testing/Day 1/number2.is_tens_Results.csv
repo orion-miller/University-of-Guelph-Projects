@@ -1,0 +1,11 @@
+Clip on Extensometer : Transducer configuration,Strain 1
+Data : Data capture,Default
+Export raw data : Export raw data,True
+
+Results Table 1
+,Specimen Type,Jawface Configuration,Tensile stress at Maximum Load,Modulus (Chord 0 mm - 0 mm),Modulus (Automatic),Tensile stress at Yield (Zero slope)
+,,,(MPa),(GPa),(GPa),(GPa)
+1,Aluminum 6061,Flat Serrated 16 TPI,"109.89138",,"24.22096",
+Mean,"","","109.89138","","24.22096",""
+Standard deviation,"","","","","",""
+
