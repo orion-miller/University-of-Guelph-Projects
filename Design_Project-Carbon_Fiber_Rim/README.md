@@ -1,6 +1,10 @@
 # About
-This is a year-long group design project currently underway. The project involves the development of lightweight carbon fiber racing wheels for FSAE. Producing carbon fiber parts is a highly specialized and time-intensive process, but when well executed they can provide superior strength and stiffness. The goal of this project is to produce a functional prototype and lay the groundwork for a transition to carbon wheels in the future. My responsibilities have included:
-• Determination of suitable wheel loading cases
-• FEA analysis of previous aluminum wheels
-• Design of the wheel profile
-• Design and manufacturing of molds
+This was a year-long Senior Capstone Design Project. The group developed a lightweight carbon fiber rim design for Formula SAE. The goal of the project was to produce a functional prototype and lay the groundwork for a transition to carbon wheels for future Gryhon Racing entries. My responsibilities included:  
+• Determination of suitable wheel loading cases from vehicle telemetry and tire test data   
+• FEA analysis of OEM aluminum wheels to set strength and stiffness benchmarks for the new design  
+• Design of the carbon wheel profile and mold assembly  
+• Manufacturing of the mold assembly using manual and CNC mills
+
+![Poster](Images%20%26%20Videos/Poster.png)
+
+![Poster](Images%20%26%20Videos/mold%20render%202%20OMM.JPG)
