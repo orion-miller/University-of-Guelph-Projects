@@ -13,4 +13,6 @@ The test results can be used to investigate the operating behavior of the damper
 • CD : Damping coefficient (mean initial slope of compression and extension curves)  
 • λ: Non-linearity coefficient  
 
-By calculating these parameters under varying test conditions, the dampers range of capabilities can be understood. The intended end result is that a reasonable initial setup can be determined to meet given vehicle performance requirements. Further tuning of the equipment can then be done based on actual on-track vehicle testing.
+By calculating these parameters under varying test conditions, the dampers full range of capabilities can be understood. The intended end result is that a reasonable initial setup can be determined to meet given vehicle performance requirements. Further tuning of the equipment can then be done based on actual on-track vehicle testing.
+
+![Test](Images%20%26%20Videos/571_574.png)
