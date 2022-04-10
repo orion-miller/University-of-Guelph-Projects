@@ -4,9 +4,9 @@ This was a past group project for ENGG 3280 Machine Design. The course requireme
 ## Technical Details
 The device has two degrees of freedom to accomplish watering at given coordinates; one drive stepper motor for translational motion along the rack gear, and another stepper motor to vary the angle of the watering spigot. The device rolls on an angle iron track to stay centered. The system was controlled by a Raspberry Pi running Python code.
 
-![Test](Images%20%26%20Videos\Solidworks%20Screenshots\Bottom.jpg)
+![Test](Images%20%26%20Videos/Solidworks%20Screenshots/Bottom.jpg)
 
-![Test](Images%20%26%20Videos\Capture.png)
+![Test](Images%20%26%20Videos/Capture.png)
 
 
 
